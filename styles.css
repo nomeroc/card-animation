@@ -100,7 +100,7 @@ img {
     left: 0;
     bottom: -1000%;
     transform: 'translateX(0) rotate(0) scale(1)';
-    transition: bottom 1s, transform .5s;
+    transition: bottom 1s, transform 1s;
 }
 
 @keyframes hoverAnimation {

@@ -12,7 +12,7 @@ const imageDetails = {
     'Мировой рынок': {
         src: '/assets/pic.png',
         styles: {
-            bottom: '-85%',
+            bottom: '-100%',
             transform: 'translateX(0) rotate(0) scale(0.7)',
         },
         hoverStyles: {
@@ -26,7 +26,7 @@ const imageDetails = {
     'Економика': {
         src: '/assets/pic2.png',
         styles: {
-            bottom: '-25%',
+            bottom: '-100%',
             transform: 'translate(0) scale(0.7)',
         },
         hoverStyles: {
@@ -40,8 +40,8 @@ const imageDetails = {
     'Технологии': {
         src: '/assets/pic4.png',
         styles: {
-            bottom: '-45%',
-            transform: 'translateX(30%) rotate(-15deg) scale(0.6)',
+            bottom: '-100%',
+            transform: 'translateX(60%) rotate(-15deg) scale(0.4)',
         },
         hoverStyles: {
             transform: 'translateX(30%) rotate(-15deg) scale(1.1)',
@@ -54,7 +54,7 @@ const imageDetails = {
     'Членство': {
         src: '/assets/pic3.png',
         styles: {
-            bottom: '-35%',
+            bottom: '-100%',
             transform: 'translateX(25%) rotate(-20.3deg) scale(0.45)',
         },
         hoverStyles: {
@@ -98,7 +98,7 @@ buttons.forEach((button) => {
             imageElement.classList.remove('image-hover-animation');
 
             void imageElement.offsetWidth;
-            imageElement.style.transition = 'bottom 1s, transform 0.5s';
+            imageElement.style.transition = 'bottom 1s, transform 1s';
 
             // Add appear animation if defined
             if (imageDetail.animation) {
