@@ -94,37 +94,39 @@ body {
 .button.active {
     background-color: rgba(0, 82, 241, 1);
 }
-.card-black:hover img {
-    animation: moveImage 3s infinite ease-in-out;
-    /* transform: scale(1); */
-}
-
 img {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -50%;
-    transform: scale(0.75);
-    transition: transform 3s ease-in-out, opacity 1s ease-in-out;
-    opacity: 1;
-}
-img.fade-out {
-    opacity: 0;
-    transform: translateX(-100%) scale(0.75);
-}
-img.fade-in {
-    opacity: 1;
-    transform: translateX(0) scale(0.75);
+    bottom: -1000%;
+    transform: 'translateX(0) rotate(0) scale(1)';
+    transition: bottom 1s, transform .5s;
 }
 
-@keyframes moveImage {
-    0% {
-        bottom: -50%;
+@keyframes hoverAnimation {
+    from {
+        transform: var(--initial-transform);
     }
-    50% {
-        bottom: -40%;
+    to {
+        transform: var(--hover-transform);
     }
-    100% {
-        bottom: -50%;
+}
+
+.image-hover-animation {
+    animation: hoverAnimation 2s infinite alternate;
+}
+
+@keyframes appearFromBottomRight {
+    from {
+        opacity: 0;
+        transform: translate(50%, 100%) scale(0);
     }
+    to {
+        opacity: 1;
+        transform: translate(30%, 0) scale(1);
+    }
+}
+
+.appear-animation {
+    animation: appearFromBottomRight 0.5s forwards;
 }
