@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card {
+    position: relative;
+    width: 538px;
+    height: 441px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.1));
+    border-radius: 16px;
+    overflow: hidden; /* Ensure the video doesn't overflow the card's rounded corners */
+}
+.background-image-left {
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    rotate: 180deg;
+    scale: 0.8;
+    transform: translate(20%, -35%) rotate(-105deg);
+
+    animation: moveCycle 5s infinite ease-in-out;
+}
+.background-image-right {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    scale: 0.8;
+    transform: translate(10%, -45%) rotate(-105deg);
+
+    animation: moveCycle 5s infinite ease-in-out;
+}
+@keyframes moveCycle {
+    0% {
+        transform: translate(10%, -45%) rotate(-105deg);
+    }
+    50% {
+        transform: translate(0%, -40%) rotate(-105deg);
+    }
+    100% {
+        transform: translate(10%, -45%) rotate(-105deg);
+    }
+}
+
+.card-content {
+    position: relative;
+    z-index: 1; /* Ensure the content stays above the video */
+    padding: 16px;
+    /* Add any additional styling for the card content */
+}

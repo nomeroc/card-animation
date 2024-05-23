@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card {
+    position: relative;
+    width: 538px;
+    height: 262px;
+    background-color: #ffffff;
+    filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.1));
+    border-radius: 16px;
+    overflow: hidden; /* Ensure the video doesn't overflow the card's rounded corners */
+}
+.background-image {
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    z-index: -1;
+    scale: 1.2;
+
+    animation: rotateCycle 15s infinite linear;
+}
+
+@keyframes rotateCycle {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+.card-content {
+    position: relative;
+    z-index: 1; /* Ensure the content stays above the video */
+    padding: 16px;
+    /* Add any additional styling for the card content */
+}

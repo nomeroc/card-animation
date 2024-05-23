@@ -4,7 +4,7 @@ import { extname } from 'node:path';
 
 const server = createServer(async (req, res) => {
   // Determine the file path based on the request URL
-  let filePath = '.' + (req.url === '/' ? '/eye2.html' : req.url);
+  let filePath = '.' + (req.url === '/' ? '/card2.html' : req.url);
 
   try {
     // Read the requested file
